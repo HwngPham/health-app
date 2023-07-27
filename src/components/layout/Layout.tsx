@@ -10,7 +10,7 @@ export const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Navigator />
-      <main>{children}</main>
+      <main className="pt-16">{children}</main>
       <Footer />
     </>
   );
