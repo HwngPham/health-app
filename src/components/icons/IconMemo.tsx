@@ -1,10 +1,13 @@
-export const IconMemo = () => (
+import { IconProps } from "./types";
+
+export const IconMemo = ({ className }: IconProps) => (
   <svg
     width="32"
     height="32"
     viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <rect opacity="0.01" width="32" height="32" fill="#FF963C" />
     <path
