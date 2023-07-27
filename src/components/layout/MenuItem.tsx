@@ -6,8 +6,8 @@ export interface MenuItemProps {
 }
 
 export const MenuItem = ({ children, label }: MenuItemProps) => (
-  <li className="flex text-light font-primary gap-2 cursor-pointer">
+  <li className="flex text-light font-primary font-light gap-2 cursor-pointer">
     {children}
-    <span className="w-24">{label}</span>
+    {label && <span className="w-24">{label}</span>}
   </li>
 );

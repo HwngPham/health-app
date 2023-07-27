@@ -5,5 +5,7 @@ export interface FooterItemProps {
 }
 
 export const FooterItem = ({ children }: FooterItemProps) => (
-  <li className="font-primary text-white cursor-pointer">{children}</li>
+  <li className="font-primary text-white cursor-pointer font-light">
+    {children}
+  </li>
 );
