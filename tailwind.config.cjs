@@ -22,6 +22,7 @@ export default {
         secondary: {
           300: "#8FE9D0",
         },
+        yellow: "#FF963C",
       },
       fontFamily: {
         primary: "NotoSansJP",
