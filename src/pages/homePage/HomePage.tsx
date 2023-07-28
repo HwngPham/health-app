@@ -1,12 +1,15 @@
 import { useState } from "react";
-import { MenuCategory } from "./components/MealCategory";
+import { MealCategory } from "./components/MealCategory";
+import { MealHistory } from "./components/MealHistory";
 
 export const HomePage = () => {
   const [mealRecords, setMealRecords] = useState([]);
+
   return (
     <>
       <p>HomePage</p>
-      <MenuCategory />
+      <MealCategory />
+      <MealHistory />
     </>
   );
 };

@@ -14,7 +14,7 @@ export const Navigator = () => {
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="navigator h-16 bg-dark-500 fixed w-full top-0">
+    <nav className="navigator h-16 bg-dark-500 fixed w-full top-0 z-40">
       <div className="navigator-container px-60 flex h-full items-center justify-between">
         <div className="logo h-10 pt-1">
           <IconLogo />
