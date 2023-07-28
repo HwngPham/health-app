@@ -13,6 +13,7 @@ export default {
         },
         gray: {
           400: "#777777",
+          500: "#707070",
         },
         primary: {
           300: "#FFCC21",

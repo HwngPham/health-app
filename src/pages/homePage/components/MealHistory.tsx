@@ -22,7 +22,9 @@ export const MealHistory = () => (
       <Row key={day} day={day} meals={meals} />
     ))}
 
-    <ButtonGradient className="w-[296px] mt-7">記録をもっと見る</ButtonGradient>
+    <ButtonGradient className="w-[296px] mt-7 mb-48">
+      記録をもっと見る
+    </ButtonGradient>
   </section>
 );
 
