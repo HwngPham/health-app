@@ -37,6 +37,7 @@ export const Diaries = () => (
   </section>
 );
 
+// TODO: move to card calendar
 interface DiaryProps {
   time: Date;
   content: string;
