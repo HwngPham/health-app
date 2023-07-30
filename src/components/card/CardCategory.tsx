@@ -1,16 +1,12 @@
 import { clsx } from "clsx";
 
-export interface CardRecordCategoryProps {
+export interface CardCategoryProps {
   label: string;
   info: string;
   coverImg: string;
 }
 
-export const CardRecordCategory = ({
-  label,
-  info,
-  coverImg,
-}: CardRecordCategoryProps) => (
+export const CardCategory = ({ label, info, coverImg }: CardCategoryProps) => (
   <div className="bg-primary-300 w-[288px] h-[288px] p-6 cursor-pointer">
     <div className="bg-black h-full">
       <div

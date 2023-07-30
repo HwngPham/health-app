@@ -1,5 +1,5 @@
 import { ButtonGradient } from "../../../components/button/ButtonGradient";
-import { CardPhoto } from "../../../components/card/CardPhoto";
+import { CardPhotoSimple } from "../../../components/card/CardPhotoSimple";
 
 const dailyMeals = {
   "05.20": {
@@ -36,7 +36,7 @@ const Row = ({ day, meals }: RowProps) => (
   <div className="flex gap-2 mb-2">
     {Object.entries(meals).map(([moment, src]) => (
       <div key={String(src)} className="overflow-hidden w-[234px] h-[234px]">
-        <CardPhoto label={`${day}.${moment}`} src={src} />
+        <CardPhotoSimple label={`${day}.${moment}`} src={src} />
       </div>
     ))}
   </div>

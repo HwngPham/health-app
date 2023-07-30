@@ -1,12 +1,12 @@
 import { clsx } from "clsx";
 
-export interface CardPhotoProps {
+export interface CardPhotoSimpleProps {
   src: string;
   label: string;
   aspectSquare?: boolean;
 }
 
-export const CardPhoto = ({ src, label }: CardPhotoProps) => {
+export const CardPhotoSimple = ({ src, label }: CardPhotoSimpleProps) => {
   return (
     <div
       className={clsx(

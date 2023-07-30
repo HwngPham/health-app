@@ -1,4 +1,4 @@
-import { CardRecordCategory } from "../../../components/card/CardRecordCategory";
+import { CardCategory } from "../../../components/card/CardCategory";
 
 const categories = [
   {
@@ -21,7 +21,7 @@ const categories = [
 export const RecordCategories = () => (
   <section id="record-categories" className="my-14 flex justify-center gap-12">
     {categories.map((category) => (
-      <CardRecordCategory key={category.label} {...category} />
+      <CardCategory key={category.label} {...category} />
     ))}
   </section>
 );
