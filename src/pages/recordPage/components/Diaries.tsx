@@ -11,7 +11,7 @@ const diaries = Array(8).fill({
 export const Diaries = () => (
   <section
     id="diary"
-    className="flex justify-center flex-col max-w-5xl mx-auto"
+    className="flex justify-center flex-col max-w-[960px] mx-auto"
   >
     <div>
       <h3
@@ -23,9 +23,9 @@ export const Diaries = () => (
       >
         MY DIARY
       </h3>
-      <div className="grid grid-cols-4 gap-3 mb-[30px] mx-auto">
-        {diaries.map((diary) => (
-          <CardCalendar key={String(diary.time)} {...diary} />
+      <div className="flex flex-wrap gap-3 mb-[30px] mx-auto">
+        {diaries.map((diary, idx) => (
+          <CardCalendar key={idx} {...diary} />
         ))}
       </div>
 
