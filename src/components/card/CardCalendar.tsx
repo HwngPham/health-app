@@ -1,4 +1,5 @@
 import { clsx } from "clsx";
+import { padZero } from "../../utils";
 
 export interface CardCalendarProps {
   time: Date;
@@ -14,10 +15,9 @@ export const CardCalendar = ({ time, content }: CardCalendarProps) => {
       )}
     >
       <div className="mb-2 h-12 text-lg font-secondary leading-[22px] tracking-[0.09px]">
-        <p>{`${time.getFullYear()}.${String(time.getUTCMonth()).padStart(
-          2,
-          "0",
-        )}.${String(time.getDate()).padStart(2, "0")}`}</p>
+        <p>{`${time.getFullYear()}.${padZero(time.getUTCMonth())}.${padZero(
+          time.getDate(),
+        )}`}</p>
         <p>{`${time.getHours()}.${time.getMinutes()}`}</p>
       </div>
       <div className="font-primary text-xs tracking-[0.06px] text-primary-400 leading-[17px]">

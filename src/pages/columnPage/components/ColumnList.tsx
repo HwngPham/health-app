@@ -1,14 +1,11 @@
 import clsx from "clsx";
 import { CardPhoto } from "../../../components/card/CardPhoto";
 import { ButtonGradient } from "../../../components/button/ButtonGradient";
+import { padZero } from "../../../utils";
 
 const toDateString = (date: Date): string => {
-  return `${date.getFullYear()}.${String(date.getUTCMonth()).padStart(
-    2,
-    "0",
-  )}.${String(date.getDate()).padStart(
-    2,
-    "0",
+  return `${date.getFullYear()}.${padZero(date.getUTCMonth())}.${padZero(
+    date.getDate(),
   )} ${date.getHours()}.${date.getMinutes()}`;
 };
 
