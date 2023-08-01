@@ -64,10 +64,13 @@ export const BodyFatChart = () => {
       className={clsx("w-[960px] h-[304px] mx-auto", "bg-dark-500")}
     >
       <TableChart
+        showHeader
         label="BODY RECORD"
         subLabel="2021.05.21"
         currentDataSet={currentDataSet}
         dataSets={dataSets}
+        width={880}
+        height={210}
       />
       <div className="flex gap-4 ml-8">
         {Object.entries(dataSetTypes).map(([key, value]) => (

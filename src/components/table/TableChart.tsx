@@ -10,43 +10,55 @@ import {
 } from "recharts";
 
 export interface TableChartProps {
-  label: string;
-  subLabel: string;
+  showHeader?: boolean;
+  label?: string;
+  subLabel?: string;
   dataSets: any;
   currentDataSet: string;
+  width?: number;
+  height?: number;
 }
 
 export const TableChart = ({
   label,
+  showHeader,
   subLabel,
   dataSets,
   currentDataSet,
+  width,
+  height,
 }: TableChartProps) => (
   <>
-    <div
-      className={clsx("flex items-center", "pl-6 pt-4 pb-[2px]", "text-white")}
-    >
-      <p
+    {showHeader && (
+      <div
         className={clsx(
-          "w-24",
-          "text-secondary text-[15px]",
-          "leading-[18px] tracking-[0.15px]",
+          "flex items-center",
+          "pl-6 pt-4 pb-[2px]",
+          "text-white",
         )}
       >
-        {label}
-      </p>
-      <p
-        className={clsx(
-          "text-[22px] font-secondary",
-          "leading-[27px] tracking-[0.11px]",
-        )}
-      >
-        {subLabel}
-      </p>
-    </div>
+        <p
+          className={clsx(
+            "w-24",
+            "text-secondary text-[15px]",
+            "leading-[18px] tracking-[0.15px]",
+          )}
+        >
+          {label}
+        </p>
+        <p
+          className={clsx(
+            "text-[22px] font-secondary",
+            "leading-[27px] tracking-[0.11px]",
+          )}
+        >
+          {subLabel}
+        </p>
+      </div>
+    )}
 
     <div className="flex justify-center">
-      <ResponsiveContainer width={880} height={210}>
+      <ResponsiveContainer width={width} height={height}>
         <LineChart
           data={dataSets[currentDataSet]}
           margin={{ bottom: 8, right: 10, left: 10 }}

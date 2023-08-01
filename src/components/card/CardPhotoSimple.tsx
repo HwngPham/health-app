@@ -23,7 +23,7 @@ export const CardPhotoSimple = ({ src, label }: CardPhotoSimpleProps) => {
       <p
         className={clsx(
           "absolute bottom-0 bg-primary-300",
-          "pl-2 py-[7px] h-8 w-[120px] ",
+          "px-2 py-[7px] h-8",
           "font-secondary text-white text-[15px] letter-spacing-[0.15px] text-left leading-[18px]",
         )}
       >

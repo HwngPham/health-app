@@ -40,6 +40,5 @@
 /* Firefox scrollbar */
 * {
   scrollbar-width: 6px;
-  border-radius: 3px;
   scrollbar-color: #ffcc21 #777777;
 }
