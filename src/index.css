@@ -17,3 +17,29 @@
 .gradient-primary {
   background: linear-gradient(33deg, #ffcc21 0%, #ff963c 100%);
 }
+
+/* === Scrollbar === */
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #777777;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffcc21;
+  border-radius: 3px;
+  width: 34px;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: 6px;
+  border-radius: 3px;
+  scrollbar-color: #ffcc21 #777777;
+}
