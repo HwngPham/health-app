@@ -9,8 +9,7 @@ export const CardCalendar = ({ time, content }: CardCalendarProps) => {
   return (
     <div
       className={clsx(
-        "w-[231px] h-[231px]",
-        "p-4",
+        "w-[231px] h-[231px] p-4",
         "border border-2 border-gray-500",
       )}
     >

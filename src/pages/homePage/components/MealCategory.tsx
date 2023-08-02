@@ -22,7 +22,7 @@ const categories = [
 ];
 
 export const MealCategory = () => (
-  <section className="meal-category mb-6">
+  <section id="meal-category" className="mb-6">
     <ul className="flex justify-center h-36 gap-[74px] mx-auto w-full">
       {categories.map((category) => (
         <li key={category.label} className="relative cursor-pointer w-[116px]">

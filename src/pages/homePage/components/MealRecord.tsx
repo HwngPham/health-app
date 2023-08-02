@@ -22,7 +22,10 @@ const dataSets = {
 
 export const MealRecord = () => {
   return (
-    <div className="bg-dark-500 flex rounded-none w-[1280px] h-[312px] mx-auto mb-6 relative">
+    <section
+      id="meal-record"
+      className="bg-dark-500 flex rounded-none w-[1280px] h-[312px] mx-auto mb-6 relative"
+    >
       <img
         src="/images/d01.jpg"
         alt="Top Meal"
@@ -55,6 +58,6 @@ export const MealRecord = () => {
           currentDataSet="year"
         />
       </div>
-    </div>
+    </section>
   );
 };

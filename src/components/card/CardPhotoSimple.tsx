@@ -18,13 +18,14 @@ export const CardPhotoSimple = ({ src, label }: CardPhotoSimpleProps) => {
       <img
         src={src}
         alt="A Meal Photo"
-        className={clsx("absolute", "object-cover h-[105%]")}
+        className="absolute object-cover h-[105%]"
       />
       <p
         className={clsx(
           "absolute bottom-0 bg-primary-300",
           "px-2 py-[7px] h-8",
-          "font-secondary text-white text-[15px] letter-spacing-[0.15px] text-left leading-[18px]",
+          "text-white text-[15px] text-left",
+          "font-secondary letter-spacing-[0.15px]  leading-[18px]",
         )}
       >
         {label}

@@ -17,7 +17,7 @@ const dailyMeals = {
 };
 
 export const MealHistory = () => (
-  <section className="meal-history flex items-center flex-col">
+  <section id="meal-history" className="flex items-center flex-col">
     {Object.entries(dailyMeals).map(([day, meals]) => (
       <Row key={day} day={day} meals={meals} />
     ))}

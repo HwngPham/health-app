@@ -10,7 +10,7 @@ const diaries = Array(8).fill({
 
 export const Diaries = () => (
   <section
-    id="diary"
+    id="diaries"
     className="flex justify-center flex-col max-w-[960px] mx-auto"
   >
     <div>

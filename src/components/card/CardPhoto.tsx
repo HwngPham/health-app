@@ -20,7 +20,8 @@ export const CardPhoto = ({ src, label, info, tags }: CardPhotoProps) => (
       className={clsx(
         "absolute top-[120px] bg-primary-300",
         "pl-2 py-1 h-6 w-36",
-        "font-secondary text-white text-[15px] letter-spacing-[0.15px] text-left leading-[18px]",
+        "text-white text-[15px] text-left",
+        "font-secondary letter-spacing-[0.15px] leading-[18px]",
       )}
     >
       {label}
