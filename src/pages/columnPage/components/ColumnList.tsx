@@ -1,71 +1,19 @@
 import clsx from "clsx";
 import { CardPhoto } from "../../../components/card/CardPhoto";
 import { ButtonGradient } from "../../../components/button/ButtonGradient";
-import { padZero } from "../../../utils";
 
-const toDateString = (date: Date): string => {
-  return `${date.getFullYear()}.${padZero(date.getUTCMonth())}.${padZero(
-    date.getDate(),
-  )} ${date.getHours()}.${date.getMinutes()}`;
-};
+export type ColumnItemType = "src" | "label" | "info" | "tags";
 
-const columnItems = [
-  {
-    src: "/images/column-1.jpg",
-    label: toDateString(new Date("2021-05-17 23:25")),
-    info: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    tags: ["魚料理", "和食", "DHA"],
-  },
-  {
-    src: "/images/column-2.jpg",
-    label: toDateString(new Date("2021-05-17 23:25")),
-    info: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    tags: ["魚料理", "和食", "DHA"],
-  },
-  {
-    src: "/images/column-3.jpg",
-    label: toDateString(new Date("2021-05-17 23:25")),
-    info: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    tags: ["魚料理", "和食", "DHA"],
-  },
-  {
-    src: "/images/column-4.jpg",
-    label: toDateString(new Date("2021-05-17 23:25")),
-    info: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    tags: ["魚料理", "和食", "DHA"],
-  },
-  {
-    src: "/images/column-5.jpg",
-    label: toDateString(new Date("2021-05-17 23:25")),
-    info: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    tags: ["魚料理", "和食", "DHA"],
-  },
-  {
-    src: "/images/column-6.jpg",
-    label: toDateString(new Date("2021-05-17 23:25")),
-    info: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    tags: ["魚料理", "和食", "DHA"],
-  },
-  {
-    src: "/images/column-7.jpg",
-    label: toDateString(new Date("2021-05-17 23:25")),
-    info: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    tags: ["魚料理", "和食", "DHA"],
-  },
-  {
-    src: "/images/column-8.jpg",
-    label: toDateString(new Date("2021-05-17 23:25")),
-    info: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    tags: ["魚料理", "和食", "DHA"],
-  },
-];
+export interface ColumnListProps {
+  items: Record<ColumnItemType, any>[];
+}
 
-export const ColumnList = () => (
+export const ColumnList = ({ items }: ColumnListProps) => (
   <section
     id="column-list"
     className={clsx("flex flex-wrap gap-2", "mx-auto w-[960px]")}
   >
-    {columnItems.map((item) => (
+    {items.map((item) => (
       <CardPhoto key={item.src} {...item} />
     ))}
 

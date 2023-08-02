@@ -1,24 +1,13 @@
 import { ButtonGradient } from "../../../components/button/ButtonGradient";
 import { CardPhotoSimple } from "../../../components/card/CardPhotoSimple";
 
-const dailyMeals = {
-  "05.20": {
-    morning: "/images/m01.jpg",
-    lunch: "/images/l03.jpg",
-    dinner: "/images/d01.jpg",
-    snack: "/images/l01.jpg",
-  },
-  "05.21": {
-    morning: "/images/m01.jpg",
-    lunch: "/images/l02.jpg",
-    dinner: "/images/d02.jpg",
-    snack: "/images/s01.jpg",
-  },
-};
+export interface MealHistoryProps {
+  meals: Record<string, any>;
+}
 
-export const MealHistory = () => (
+export const MealHistory = ({ meals }: MealHistoryProps) => (
   <section id="meal-history" className="flex items-center flex-col">
-    {Object.entries(dailyMeals).map(([day, meals]) => (
+    {Object.entries(meals).map(([day, meals]) => (
       <Row key={day} day={day} meals={meals} />
     ))}
 

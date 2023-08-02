@@ -2,13 +2,11 @@ import { clsx } from "clsx";
 import { ButtonGradient } from "../../../components/button/ButtonGradient";
 import { CardCalendar } from "../../../components/card/CardCalendar";
 
-const diaries = Array(8).fill({
-  time: new Date("2021-05-12 23:25"),
-  content: `私の日記の記録が一部表示されます。
-  テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…`,
-});
+export interface DiariesProps {
+  diaries: Record<"time" | "content", any>[];
+}
 
-export const Diaries = () => (
+export const Diaries = ({ diaries }: DiariesProps) => (
   <section
     id="diaries"
     className="flex justify-center flex-col max-w-[960px] mx-auto"

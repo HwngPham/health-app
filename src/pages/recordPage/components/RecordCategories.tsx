@@ -1,24 +1,10 @@
 import { CardCategory } from "../../../components/card/CardCategory";
 
-const categories = [
-  {
-    label: "body reccord",
-    info: "自分のカラダの記録",
-    coverImg: "/images/MyRecommend-1.jpg",
-  },
-  {
-    label: "my excercise",
-    info: "自分の運動の記録",
-    coverImg: "/images/MyRecommend-2.jpg",
-  },
-  {
-    label: "my diary",
-    info: "自分の日記",
-    coverImg: "/images/MyRecommend-3.jpg",
-  },
-];
+export interface RecordCategoriesProps {
+  categories: Record<"label" | "info" | "coverImg", string>[];
+}
 
-export const RecordCategories = () => (
+export const RecordCategories = ({ categories }: RecordCategoriesProps) => (
   <section id="record-categories" className="my-14 flex justify-center gap-12">
     {categories.map((category) => (
       <CardCategory key={category.label} {...category} />
